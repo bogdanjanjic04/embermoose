@@ -1,6 +1,7 @@
 # Ember Moose
 
-> The personal build archive of Bogdan Janjić (ToShamara): software, games, mods and experiments from Užice, Serbia.
+> The personal build archive of Bogdan Janjić: software, games, mods and experiments.
+> Site: https://embermoose.github.io (source: https://github.com/bogdanjanjic04/embermoose)
 
 A dark editorial developer portfolio for a final-year Applied IT student at Akademija strukovnih studija Zapadna Srbija, graduating late 2026. Built with Next.js (App Router), TypeScript and Tailwind CSS v4.
 
@@ -28,6 +29,8 @@ A dark editorial developer portfolio for a final-year Applied IT student at Akad
 - GitHub: https://github.com/bogdanjanjic04
 - itch.io: https://toshamara.itch.io
 - ANTE ZERO (playable in browser): https://toshamara.itch.io/ante-zero
+- headless-samp source: https://github.com/bogdanjanjic04/headless-samp-tui
+- Graditelj Navika source: https://github.com/bogdanjanjic04/graditelj-navika
 - X: https://x.com/ToShamara
 - ChatCommands source: https://github.com/bogdanjanjic04/ChatCommands
 - ScreenWatcher source: https://github.com/bogdanjanjic04/ScreenWatcher
