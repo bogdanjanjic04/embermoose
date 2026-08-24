@@ -1,0 +1,17 @@
+# dependencies / builds
+/node_modules
+/.next
+/out
+
+# private material — never publish
+AllFiles.txt
+*.log
+.env*
+
+# AI tooling artifacts
+/.hallmark
+/.cursor
+
+# misc
+.DS_Store
+*.tsbuildinfo

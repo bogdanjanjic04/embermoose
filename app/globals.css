@@ -1,0 +1,432 @@
+/* Ember Moose · genre: editorial · macrostructure: Split Studio · theme: custom "ember"
+ * paper oklch(14.5% 0.008 25) warm charcoal · ink oklch(94% 0.007 60) · accent oklch(62% 0.20 27) signal red
+ * display: Bricolage Grotesque · body: IBM Plex Sans · register: IBM Plex Mono
+ * enrichment: none photographic (hand-built SVG schematics) · nav: N9 edge-aligned · footer: Ft4 colophon */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+
+@theme inline {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+::selection {
+  background-color: var(--color-accent-deep);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* faint film grain so near-black fields read as surface, not void */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@utility mono-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+@utility chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-rule);
+  padding: 0.125rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.02em;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+@utility link-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-rule-strong);
+  transition: text-decoration-color 160ms var(--ease-out-quart), color 160ms var(--ease-out-quart);
+
+  &:hover {
+    text-decoration-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+}
+
+@utility cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--color-rule-strong);
+  padding: 0.65rem 1.15rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.03em;
+  color: var(--color-ink);
+  white-space: nowrap;
+  transition: border-color 160ms var(--ease-out-quart), background-color 160ms var(--ease-out-quart),
+    color 160ms var(--ease-out-quart);
+
+  &:hover {
+    border-color: var(--color-accent);
+    background-color: var(--color-raised);
+    color: var(--color-accent);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+@utility cta-primary {
+  border-color: var(--color-accent-deep);
+  background-color: var(--color-accent-ghost);
+  color: var(--color-ink);
+
+  &:hover {
+    border-color: var(--color-accent);
+    background-color: var(--color-lifted);
+    color: var(--color-accent);
+  }
+}
+
+/* the one signature move: the mark occasionally glitches a step, like a sprite losing a frame */
+.pickle-mark {
+  animation: pickle-glitch 9s steps(1, end) infinite;
+  transform-origin: center;
+}
+
+@keyframes pickle-glitch {
+  0%,
+  91%,
+  94.6%,
+  100% {
+    transform: none;
+  }
+  92% {
+    transform: translate(-1.5px, 0) rotate(-2.5deg);
+  }
+  93% {
+    transform: translate(1.5px, -1px) rotate(1.5deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* shadcn component variables, mapped onto the Ember Moose palette (site is permanently dark) */
+:root {
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
+  --card: var(--color-raised);
+  --card-foreground: var(--color-ink);
+  --popover: var(--color-lifted);
+  --popover-foreground: var(--color-ink);
+  --primary: var(--color-accent-deep);
+  --primary-foreground: var(--color-ink);
+  --secondary: var(--color-lifted);
+  --secondary-foreground: var(--color-ink);
+  --muted: var(--color-raised);
+  --muted-foreground: var(--color-muted);
+  --accent: var(--color-accent-ghost);
+  --accent-foreground: var(--color-ink);
+  --destructive: oklch(0.55 0.2 25);
+  --border: var(--color-rule);
+  --input: var(--color-rule);
+  --ring: var(--color-focus);
+  --radius: 0.125rem;
+}
+
+/* deep-link landing: the targeted note or lab entry pulses briefly */
+@keyframes target-pulse {
+  0%,
+  100% {
+    background-color: transparent;
+  }
+  18% {
+    background-color: color-mix(in oklch, var(--color-accent-ghost) 55%, transparent);
+  }
+}
+
+[id]:target {
+  scroll-margin-top: 5.5rem;
+  animation: target-pulse 1.6s var(--ease-out-quart) both;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+}
+/* Ember Moose palette + type scale. Declared after the shadcn mapping block
+   so these tokens win the collision on --color-muted / --color-accent etc. */
+@theme {
+  --color-paper: oklch(14% 0.006 27);
+  --color-raised: oklch(18.5% 0.008 27);
+  --color-lifted: oklch(23% 0.009 27);
+  --color-rule: oklch(30% 0.012 27);
+  --color-rule-strong: oklch(45% 0.035 27);
+  --color-ink: oklch(94% 0.007 60);
+  --color-muted: oklch(72% 0.012 45);
+  --color-faint: oklch(58% 0.012 40);
+  --color-accent: oklch(66% 0.15 30);
+  --color-accent-deep: oklch(43.6% 0.109 27);
+  --color-accent-ghost: oklch(30% 0.07 27);
+  --color-focus: oklch(78% 0.13 35);
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 1rem;
+  --text-md: 1.1875rem;
+  --text-lg: 1.375rem;
+  --text-xl: 1.7rem;
+  --text-2xl: 2.1rem;
+  --text-3xl: clamp(1.9rem, 1.2vw + 1.5rem, 2.6rem);
+  --text-4xl: clamp(2.2rem, 2vw + 1.6rem, 3.4rem);
+  --text-hero: clamp(2.35rem, 4.2vw + 1.1rem, 4.6rem);
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --animate-rise: rise 0.7s var(--ease-out-quart) both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ============================================================
+   BRUTALIST SKIN · full variant
+   Structure untouched: this block only sharpens tokens and
+   hardens components. Everything above stays for reference.
+   ============================================================ */
+
+:root {
+  /* flatter paper, harder edges */
+  --color-paper: oklch(13% 0.004 27);
+  --color-raised: oklch(17% 0.005 27);
+  --color-lifted: oklch(21% 0.006 27);
+  --color-rule: oklch(35% 0.008 27);
+  --color-rule-strong: oklch(56% 0.04 28);
+  --radius: 0rem;
+}
+
+body::after {
+  display: none; /* no grain: brutalism is flat */
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-paper);
+}
+
+/* display type: loud, tight, uppercase */
+h1,
+h2,
+h3,
+.font-display {
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.mono-label {
+  letter-spacing: 0.14em;
+}
+
+/* hard 2px chrome on the shell */
+header nav,
+[id] > header,
+article > header {
+  border-color: var(--color-rule-strong);
+}
+
+header {
+  border-bottom-width: 2px !important;
+  border-bottom-color: var(--color-rule-strong) !important;
+}
+
+footer {
+  border-top-width: 4px;
+  border-top-color: var(--color-ink);
+}
+
+/* wordmark in a box */
+nav a[href="/"] {
+  border: 2px solid var(--color-rule-strong);
+  padding: 0.3rem 0.7rem;
+}
+
+nav a[href="/"]:hover {
+  border-color: var(--color-accent);
+}
+
+/* buttons: square, 2px, invert on hover, offset press */
+.cta {
+  border-width: 2px;
+  border-color: var(--color-ink);
+  background-color: transparent;
+}
+
+.cta:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-paper);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 0 var(--color-accent-ghost);
+}
+
+.cta:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+.cta-primary {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.cta-primary:hover {
+  color: var(--color-paper);
+}
+
+/* chips: square, uppercase, louder border */
+.chip {
+  border-width: 1.5px;
+  border-color: var(--color-rule-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.65rem;
+}
+
+/* links always underlined */
+.main a:not(.cta):not([class*="no-underline"]),
+main a:not(.cta):not([class*="no-underline"]) {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* art plates: framed, offset-shadowed */
+figure > a,
+figure > div {
+  border-width: 2px !important;
+  border-color: var(--color-rule-strong) !important;
+  box-shadow: 6px 6px 0 0 var(--color-lifted);
+}
+
+figure > a:hover {
+  transform: translate(-3px, -3px) !important;
+  box-shadow: 9px 9px 0 0 var(--color-accent-ghost) !important;
+}
+
+/* metadata tables: full-height rules read as ledger */
+dl, ol, ul {
+  border-color: var(--color-rule-strong);
+}
+
+/* filter bar: harder */
+[role="group"][aria-label*="Filter"] button {
+  letter-spacing: 0.14em;
+}
+
+[role="group"][aria-label*="Filter"] button[aria-pressed="true"] {
+  border-bottom-width: 3px;
+}
+
+
+@keyframes moose-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(240deg);
+    opacity: 0.9;
+  }
+}
+
+.animate-moose-fall {
+  animation: moose-fall 3s linear both;
+}
