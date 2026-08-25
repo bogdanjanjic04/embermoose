@@ -46,14 +46,14 @@ export default function Hero() {
             </HeroReveal>
           </div>
 
-          <HeroReveal delay={0.14} className="flex items-stretch justify-center lg:col-span-4 lg:justify-end">
+          <div className="pointer-events-none relative hidden lg:col-span-4 lg:block" aria-hidden="true">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={asset("/images/brand/embermoose_large_nobackground.svg")}
               alt=""
-              className="h-72 w-auto object-contain object-right-bottom lg:h-full"
+              className="animate-rise absolute inset-y-0 right-0 h-full w-auto max-w-none object-contain object-right-bottom" style={{ animationDelay: "140ms" }}
             />
-          </HeroReveal>
+          </div>
         </div>
       </div>
     </section>
