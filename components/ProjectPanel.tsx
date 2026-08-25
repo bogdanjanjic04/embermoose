@@ -107,12 +107,30 @@ export default function ProjectPanel({ project, index, flip = false, compact = f
       </div>
 
       <figure className={flip ? "lg:order-1" : ""}>
-        <Link
-          href={`/projects/${project.slug}`}
-          className="block border border-rule bg-raised/40 no-underline transition-transform duration-300 ease-[var(--ease-out-quart)] group-hover:-translate-y-1.5"
-        >
-          <ProjectArt variant={project.art} />
-        </Link>
+        <TiltCard>
+          <Link
+            href={`/projects/${project.slug}`}
+            className="block border border-rule bg-raised/40 no-underline"
+          >
+            {project.shot ? (
+              <Image
+                src={project.shot.src}
+                alt={project.shot.alt}
+                width={1600}
+                height={900}
+                unoptimized
+                className="h-auto w-full object-cover"
+              />
+            ) : (
+              <div className="relative">
+                <ProjectArt variant={project.art} />
+                <span className="absolute bottom-3 right-3 border border-rule-strong bg-paper/90 px-2 py-1 font-mono text-[0.65rem] uppercase tracking-[0.12em] text-faint">
+                  capture pending
+                </span>
+              </div>
+            )}
+          </Link>
+        </TiltCard>
         <figcaption className="px-1 pt-3 font-mono text-xs tracking-wide text-faint">
           {project.caption}
         </figcaption>
