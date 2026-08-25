@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
-import Image from "next/image";
 import ProjectArt from "@/components/ProjectArt";
 import TiltCard from "@/components/TiltCard";
+import { asset } from "@/lib/assets";
 import { PROJECTS } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -44,13 +44,14 @@ export default function GalleryPage() {
                   </span>
                 </span>
                 <span className="block">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   {project.shot ? (
-                    <Image
-                      src={project.shot.src}
+                    <img
+                      src={asset(project.shot.src)}
                       alt={project.shot.alt}
                       width={800}
                       height={450}
-                      unoptimized
+                      loading="lazy"
                       className="h-auto w-full object-cover"
                     />
                   ) : (

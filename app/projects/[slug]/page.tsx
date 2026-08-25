@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import Image from "next/image";
 import ProjectArt from "@/components/ProjectArt";
 import TiltCard from "@/components/TiltCard";
+import { asset } from "@/lib/assets";
 import InfoTip from "@/components/InfoTip";
 import { CATEGORY_LABELS, MOD_NOTES, PROJECTS } from "@/lib/data";
 import { ArrowRight, ArrowUpRight, Code, Play } from "@phosphor-icons/react/dist/ssr";
@@ -119,14 +119,13 @@ export default async function ProjectPage({
       <figure className="border-y border-rule bg-raised/30">
         <div className="mx-auto max-w-4xl px-5 py-10 md:px-8 md:py-14">
           <TiltCard max={3}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           {project.shot ? (
-            <Image
-              src={project.shot.src}
+            <img
+              src={asset(project.shot.src)}
               alt={project.shot.alt}
               width={1600}
               height={900}
-              unoptimized
-              priority
               className="h-auto w-full border border-rule"
             />
           ) : (

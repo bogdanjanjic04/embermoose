@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Project } from "@/lib/data";
 import { CATEGORY_LABELS } from "@/lib/data";
 import { ArrowRight, Play, Code } from "@phosphor-icons/react/dist/ssr";
-import Image from "next/image";
+import { asset } from "@/lib/assets";
 import ProjectArt from "./ProjectArt";
 import TiltCard from "./TiltCard";
 import InfoTip from "./InfoTip";
@@ -112,13 +112,14 @@ export default function ProjectPanel({ project, index, flip = false, compact = f
             href={`/projects/${project.slug}`}
             className="block border border-rule bg-raised/40 no-underline"
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             {project.shot ? (
-              <Image
-                src={project.shot.src}
+              <img
+                src={asset(project.shot.src)}
                 alt={project.shot.alt}
                 width={1600}
                 height={900}
-                unoptimized
+                loading="lazy"
                 className="h-auto w-full object-cover"
               />
             ) : (

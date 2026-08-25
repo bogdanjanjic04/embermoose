@@ -46,7 +46,7 @@ export default function SiteNav() {
         className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 md:px-8"
       >
         <Link href="/" className="flex items-center gap-2.5 text-ink no-underline hover:text-accent">
-          <MooseMark size={26} glitch />
+          <MooseMark size={26} glitch withBg />
           <span className="font-display text-lg font-bold tracking-tight">
             Ember&nbsp;Moose
           </span>

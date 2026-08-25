@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { asset } from "@/lib/assets";
 import { useRef, useState } from "react";
 import MooseMark from "./MooseMark";
 
@@ -57,8 +57,9 @@ export default function FooterWordmark() {
                 animationDelay: `${d.delay}s`,
               }}
             >
-              <Image
-                src="/images/brand/embermoose_fall.svg"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={asset("/images/brand/embermoose_fall.svg")}
                 alt=""
                 width={SIZE}
                 height={SIZE}
