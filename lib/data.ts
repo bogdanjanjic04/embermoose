@@ -114,7 +114,7 @@ export const PROJECTS: Project[] = [
       "Code-driven UI and custom game-logic systems instead of off-the-shelf templates; placeholder asset pipeline kept deliberately swappable; ongoing static-analysis and bug-fixing passes",
     ],
     art: "pillars",
-    caption: "fig. 01 · role selection — in-game capture",
+    caption: "fig. 01 · role selection: in-game capture",
     shot: { src: "/images/projects/pillars-of-control-roles.webp", alt: "Pillars of Control role selection: Farmer, Businessman, Store Manager and Regulator" },
     relatedNoteIds: [],
     sections: [
@@ -160,7 +160,7 @@ export const PROJECTS: Project[] = [
       "Packaged for Windows and Android alongside the browser build; audio pooling and a complete test suite behind the scenes; dark blocky pixel-art assets organized in clearly named directories for future swapping",
     ],
     art: "countedout",
-    caption: "fig. 02 · The Cut at COUNT 29 — in-game capture",
+    caption: "fig. 02 · The Cut at COUNT 29: in-game capture",
     shot: { src: "/images/projects/ante-zero-gameplay.webp", alt: "ANTE ZERO in play: the card table at COUNT 29, five fingers on each side, three cards left to choose" },
     links: [{ label: "Play in browser", href: "https://toshamara.itch.io/ante-zero", kind: "play" }],
     relatedNoteIds: [],
@@ -380,7 +380,7 @@ export const PROJECTS: Project[] = [
       "Runs the Win32 backend under a dedicated Wine prefix on Linux, or natively on Windows through run.bat with windows-curses",
     ],
     art: "handoff",
-    caption: "fig. 09 · the terminal client driving the RakSAMP backend — live capture",
+    caption: "fig. 09 · the terminal client driving the RakSAMP backend: live capture",
     shot: { src: "/images/projects/headless-samp-tui.webp", alt: "The headless-samp terminal UI: backend ready, reconnect loop against 127.0.0.1:7777 and the keybind footer" },
     links: [{ label: "Source on GitHub", href: "https://github.com/bogdanjanjic04/headless-samp-tui", kind: "code" }],
     sections: [

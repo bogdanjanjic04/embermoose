@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
 import ProjectArt from "@/components/ProjectArt";
+import TiltCard from "@/components/TiltCard";
 import { PROJECTS } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -29,9 +30,10 @@ export default function GalleryPage() {
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project, i) => (
             <li key={project.slug} className="group">
+              <TiltCard>
               <Link
                 href={`/projects/${project.slug}`}
-                className="block border border-rule bg-raised/40 no-underline transition-transform duration-300 ease-[var(--ease-out-quart)] group-hover:-translate-y-1.5"
+                className="block border border-rule bg-raised/40 no-underline"
               >
                 <span className="block border-b border-rule px-4 py-2.5">
                   <span className="mono-label text-accent">
@@ -56,6 +58,7 @@ export default function GalleryPage() {
                   )}
                 </span>
               </Link>
+              </TiltCard>
               <p className="px-1 pt-2.5 font-mono text-xs leading-relaxed tracking-wide text-faint">
                 {project.caption}
               </p>

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Image from "next/image";
 import ProjectArt from "@/components/ProjectArt";
+import TiltCard from "@/components/TiltCard";
 import InfoTip from "@/components/InfoTip";
 import { CATEGORY_LABELS, MOD_NOTES, PROJECTS } from "@/lib/data";
 import { ArrowRight, ArrowUpRight, Code, Play } from "@phosphor-icons/react/dist/ssr";
@@ -117,6 +118,7 @@ export default async function ProjectPage({
 
       <figure className="border-y border-rule bg-raised/30">
         <div className="mx-auto max-w-4xl px-5 py-10 md:px-8 md:py-14">
+          <TiltCard max={3}>
           {project.shot ? (
             <Image
               src={project.shot.src}
@@ -138,6 +140,7 @@ export default async function ProjectPage({
           <figcaption className="px-1 pt-4 font-mono text-xs tracking-wide text-faint">
             {project.caption}
           </figcaption>
+          </TiltCard>
         </div>
       </figure>
 

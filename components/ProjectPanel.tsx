@@ -4,6 +4,7 @@ import { CATEGORY_LABELS } from "@/lib/data";
 import { ArrowRight, Play, Code } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import ProjectArt from "./ProjectArt";
+import TiltCard from "./TiltCard";
 import InfoTip from "./InfoTip";
 
 type Props = {
