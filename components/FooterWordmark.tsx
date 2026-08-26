@@ -73,9 +73,9 @@ export default function FooterWordmark() {
         type="button"
         onClick={press}
         aria-label="Ember Moose"
-        className="flex cursor-pointer items-center gap-2.5 border-0 bg-transparent p-0 text-ink"
+        className="flex cursor-default items-center gap-2.5 border-0 bg-transparent p-0 text-ink"
       >
-        <MooseMark size={24} />
+        <MooseMark size={24} withBg />
         <span className="font-display text-lg font-bold tracking-tight">
           Ember Moose
         </span>

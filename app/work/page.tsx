@@ -23,7 +23,7 @@ export default function WorkIndexPage() {
         ]}
       />
 
-      <div className="mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28">
+      <div className="mx-auto max-w-6xl px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-14">
         <p className="border-y border-rule py-4 text-sm text-muted">
           <span className="mono-label mr-3 text-faint">Languages</span>
           C# · Kotlin · PHP · Node.js / JavaScript · Python · GDScript · C

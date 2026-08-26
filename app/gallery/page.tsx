@@ -26,7 +26,7 @@ export default function GalleryPage() {
         ]}
       />
 
-      <div className="mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28">
+      <div className="mx-auto max-w-6xl px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-14">
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project, i) => (
             <li key={project.slug} className="group">

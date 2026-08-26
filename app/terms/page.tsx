@@ -20,7 +20,7 @@ export default function TermsPage() {
           { href: "/terms", label: "Terms" },
         ]}
       />
-      <div className="mx-auto max-w-3xl space-y-5 px-5 pb-20 text-md leading-relaxed text-muted md:px-8 md:pb-28">
+      <div className="mx-auto max-w-3xl space-y-5 px-5 pb-20 pt-10 text-md leading-relaxed text-muted md:px-8 md:pb-28 md:pt-14">
         <p>
           This site is a personal portfolio documenting work by{" "}
           {SITE.owner} ({SITE.handle}). Content is provided as-is, for

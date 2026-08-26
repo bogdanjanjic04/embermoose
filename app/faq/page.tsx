@@ -43,7 +43,7 @@ export default function FaqPage() {
         ]}
       />
 
-      <div className="mx-auto max-w-3xl px-5 pb-20 md:px-8 md:pb-28">
+      <div className="mx-auto max-w-3xl px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-14">
         <Accordion className="divide-y divide-rule border-y border-rule">
           {FAQS.map((faq, i) => (
             <AccordionItem key={faq.question} className="border-rule" value={`faq-${i + 1}`} id={`faq-${i + 1}`}>

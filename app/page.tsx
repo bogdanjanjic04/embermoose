@@ -86,7 +86,7 @@ export default function HomePage() {
             <p className="mono-label text-faint">
               <span className="text-accent">03</span> / from the field notes
             </p>
-            <h2 id="notes-heading" className="mt-3 font-display text-2xl font-bold tracking-tight">
+            <h2 id="notes-heading" className="mt-3 font-display text-2xl font-bold tracking-tight whitespace-nowrap">
               Fresh from the modding notebook.
             </h2>
             <ul className="mt-6 divide-y divide-rule border-y border-rule">

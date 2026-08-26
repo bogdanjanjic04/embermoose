@@ -51,7 +51,7 @@ export default async function PostPage({
         ]}
       />
 
-      <div className="mx-auto max-w-3xl px-5 pb-20 md:px-8 md:pb-28">
+      <div className="mx-auto max-w-3xl px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-14">
         <div className="flex flex-wrap items-center gap-2">
           {post.tags.map((t) => (
             <span key={t} className="chip">

@@ -34,7 +34,7 @@ export default function AboutPage() {
         ]}
       />
 
-      <div className="mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28">
+      <div className="mx-auto max-w-6xl px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-14">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="space-y-5 text-md leading-relaxed text-muted lg:col-span-7 md:max-w-[62ch]">
             <p>

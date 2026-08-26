@@ -62,7 +62,7 @@ export default async function AreaPage({
         ]}
       />
 
-      <div className="mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28">
+      <div className="mx-auto max-w-6xl px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-14">
         <p className="mono-label border-y border-rule py-4 text-muted">
           <span className="mr-3 text-faint">Tools</span>
           {area.items.join(" · ")}

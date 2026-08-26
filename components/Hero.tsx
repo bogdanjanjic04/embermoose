@@ -28,8 +28,8 @@ export default function Hero() {
             <HeroReveal delay={0.16}>
               <p className="mt-6 max-w-[56ch] text-lg text-muted">
                 …and things that probably should have been separate projects.
-                I’m Bogdan. I build desktop apps, Android software, Godot games
-                and Stardew Valley mods. Ember Moose is where all of it lives.
+                I'm Bogdan. I build desktop apps, Android software, games
+                and much more. Ember Moose is where all of it lives.
               </p>
             </HeroReveal>
 

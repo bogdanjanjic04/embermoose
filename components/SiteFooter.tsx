@@ -43,7 +43,7 @@ export default function SiteFooter() {
 
           <nav aria-label="Footer sections">
             <p className="mono-label text-faint">Sections</p>
-            <ul className="mt-3 space-y-2 text-sm">
+            <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
               {[...SECTIONS, ...MORE].map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="link-underline text-muted no-underline">

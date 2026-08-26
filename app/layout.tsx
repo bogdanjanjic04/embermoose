@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s · Ember Moose",
   },
   description:
-    "Software, games, tools and experiments by Bogdan Janjić: desktop apps, Android development, Godot games, Stardew Valley mods, Linux systems work and local LLM tooling.",
+    "Software, games, tools and experiments by Bogdan Janjić: desktop apps, Android development, games, Linux systems work and local LLM tooling.",
   applicationName: "Ember Moose",
   authors: [{ name: "Bogdan Janjić" }],
   creator: "Bogdan Janjić",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "Ember Moose · Bogdan Janjić",
     description:
-      "One developer, an unreasonable range of builds: Godot games, Android apps, WPF tools, SMAPI mods, Linux experiments and local LLM pipelines.",
+      "One developer, an unreasonable range of builds: desktop apps, Android software, games, Linux experiments and local LLM pipelines.",
     locale: "en_US",
   },
   twitter: {
@@ -55,7 +55,7 @@ const websiteJsonLd = {
   alternateName: "Ember Moose: Bogdan Janjić",
   url: SITE_URL,
   description:
-    "Software, games, tools and experiments by Bogdan Janjić: desktop apps, Android development, Godot games, Stardew Valley mods, Linux systems work and local LLM tooling.",
+    "Software, games, tools and experiments by Bogdan Janjić: desktop apps, Android development, games, Linux systems work and local LLM tooling.",
 };
 
 const personJsonLd = {

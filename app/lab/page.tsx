@@ -21,7 +21,7 @@ export default function LabPage() {
         ]}
       />
 
-      <div className="mx-auto max-w-6xl space-y-14 px-5 pb-20 md:px-8 md:pb-28">
+      <div className="mx-auto max-w-6xl space-y-14 px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-14">
         {LAB_ENTRIES.map((entry, i) => (
           <section
             key={entry.id}

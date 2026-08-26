@@ -20,7 +20,7 @@ export default function PrivacyPage() {
           { href: "/privacy", label: "Privacy" },
         ]}
       />
-      <div className="mx-auto max-w-3xl space-y-5 px-5 pb-20 text-md leading-relaxed text-muted md:px-8 md:pb-28">
+      <div className="mx-auto max-w-3xl space-y-5 px-5 pb-20 pt-10 text-md leading-relaxed text-muted md:px-8 md:pb-28 md:pt-14">
         <p>
           Ember Moose is a personal portfolio site. It collects no personal
           data by itself: there are no accounts, no comments, no newsletter
