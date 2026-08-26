@@ -13,17 +13,17 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "Ember Moose · Bogdan Janjić",
-    template: "%s · Red Pickle",
+    template: "%s · Ember Moose",
   },
   description:
     "Software, games, tools and experiments by Bogdan Janjić: desktop apps, Android development, Godot games, Stardew Valley mods, Linux systems work and local LLM tooling.",
-  applicationName: "Red Pickle",
+  applicationName: "Ember Moose",
   authors: [{ name: "Bogdan Janjić" }],
   creator: "Bogdan Janjić",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    siteName: "Red Pickle",
+    siteName: "Ember Moose",
     url: SITE_URL,
     title: "Ember Moose · Bogdan Janjić",
     description:

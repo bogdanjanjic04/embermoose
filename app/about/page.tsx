@@ -94,15 +94,15 @@ export default function AboutPage() {
         <section aria-labelledby="brand-heading" className="mt-16 border-t border-rule pt-10 md:mt-20 md:pt-14">
           <p className="mono-label text-faint">The name</p>
           <h2 id="brand-heading" className="mt-3 max-w-[26ch] font-display text-2xl font-bold tracking-tight">
-            Why “Red Pickle”?
+            Why “Ember Moose”?
           </h2>
           <div className="mt-5 max-w-[62ch] space-y-4 text-md leading-relaxed text-muted">
             <p>
-              It is not a food brand and there is no lore to explain. Red is the
-              accent this whole archive runs on: one signal color over dark
-              charcoal, used only where something deserves attention. The
-              pickle is the deliberately odd little mark that makes the site
-              recognizably mine instead of generically clean.
+              No lore to explain. Ember is the palette this whole archive runs
+              on: one smoldering signal color over dark charcoal, used only
+              where something deserves attention. The moose is the deliberately
+              odd mark that makes the site recognizably mine instead of
+              generically clean.
             </p>
             <p>
               The name does what a good handle should: it sticks, it doesn’t
