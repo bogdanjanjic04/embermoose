@@ -79,24 +79,25 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 border-t border-rule pt-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,18rem)]">
-          <div>
-            <h2 className="font-display text-xl font-bold tracking-tight">What to include</h2>
-            <p className="mt-3 max-w-[60ch] text-md leading-relaxed text-muted">
-              A sentence about the role or project, what success looks like,
-              and roughly when. Messages that say what they need get answers
-              faster than ones that don’t.
-            </p>
-          </div>
-          <dl className="divide-y divide-rule border-y border-rule text-sm">
-            <div className="flex items-center justify-between gap-4 py-3">
-              <dt className="mono-label text-faint">Open to</dt>
-              <dd className="text-right text-muted">Internships · junior &amp; mid-level dev roles</dd>
+        <div className="mt-12 border-t border-rule pt-8">
+          <h2 className="font-display text-xl font-bold tracking-tight">Fastest routes</h2>
+          <dl className="mt-5 divide-y divide-rule border-y border-rule text-sm">
+            <div className="grid gap-1 py-3.5 md:grid-cols-[minmax(0,12rem)_minmax(0,1fr)] md:gap-6">
+              <dt className="mono-label pt-0.5 text-faint">Work offer</dt>
+              <dd className="text-muted">
+                GitHub profile with a short intro, or an X message. Both land in the same place.
+              </dd>
             </div>
-            <div className="flex items-center justify-between gap-4 py-3">
-              <dt className="mono-label text-faint">Background</dt>
-              <dd className="text-right text-muted">
-                <Link href="/about" className="link-underline">On the About page</Link>
+            <div className="grid gap-1 py-3.5 md:grid-cols-[minmax(0,12rem)_minmax(0,1fr)] md:gap-6">
+              <dt className="mono-label pt-0.5 text-faint">Game feedback</dt>
+              <dd className="text-muted">
+                itch.io comment sections, per game. ANTE ZERO feedback goes straight to its page.
+              </dd>
+            </div>
+            <div className="grid gap-1 py-3.5 md:grid-cols-[minmax(0,12rem)_minmax(0,1fr)] md:gap-6">
+              <dt className="mono-label pt-0.5 text-faint">Mod issues</dt>
+              <dd className="text-muted">
+                GitHub issues on the mod&rsquo;s repository, so fixes are tracked in the open.
               </dd>
             </div>
           </dl>

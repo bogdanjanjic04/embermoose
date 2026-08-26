@@ -7,11 +7,11 @@ import { List, X } from "@phosphor-icons/react/dist/ssr";
 import MooseMark from "./MooseMark";
 
 const LINKS = [
-  { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/modding", label: "Modding" },
   { href: "/lab", label: "Lab" },
   { href: "/blog", label: "Blog" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 

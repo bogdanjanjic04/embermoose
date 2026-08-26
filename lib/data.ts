@@ -43,11 +43,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
 export const NOTE_CATEGORIES: Record<string, Category[]> = {
   "note:renameanimal": ["modding"],
   "note:chat-commands-16": ["modding"],
-  "note:ssh-farmhand": ["modding", "systems"],
   "note:serbian-pipeline": ["modding", "ai"],
-  "note:xnb-textures": ["modding"],
-  "note:spritefont-diacritics": ["modding"],
-  "note:save-repair": ["modding"],
   "lab:local-llm": ["ai", "experiments"],
   "lab:samp-research": ["systems"],
   "lab:system-tools": ["systems", "software"],
@@ -497,34 +493,10 @@ export const MOD_NOTES: ModNote[] = [
     link: { label: "ChatCommands on GitHub", href: "https://github.com/bogdanjanjic04/ChatCommands" },
   },
   {
-    id: "ssh-farmhand",
-    title: "SSH farmhand access",
-    body: "Two-version remote-access mod letting a farmhand join over SSH using SSH.NET: built to survive differences between two game versions.",
-    tags: ["C#", "SSH.NET", "Networking"],
-  },
-  {
     id: "serbian-pipeline",
     title: "Serbian localization pipeline",
     body: "A large Ollama-powered pipeline for localizing Stardew Valley’s JSON files into Serbian, paired with the manual grind: one mod’s 62 JSON files translated by hand into Serbian Latin.",
     tags: ["Ollama", "JSON", "Localization"],
-  },
-  {
-    id: "xnb-textures",
-    title: "XNB texture replacement",
-    body: "Texture swaps at the XNB container level: unpacking, replacing and repacking game assets below the mod layer.",
-    tags: ["XNB", "Assets"],
-  },
-  {
-    id: "spritefont-diacritics",
-    title: "SpriteFont diacritics investigation",
-    body: "Investigated patching SpriteFont rendering so Serbian diacritic characters (č, ć, š, ž, đ) actually appear in the game’s font: glyph atlas surgery, not just a content swap.",
-    tags: ["SpriteFont", "Glyphs"],
-  },
-  {
-    id: "save-repair",
-    title: "Save-file repair",
-    body: "Repaired corrupted Stardew Valley save files with Python scripts: XML surgery on farmstate until the load screen agrees again.",
-    tags: ["Python", "XML"],
   },
 ];
 
@@ -644,28 +616,6 @@ export const POSTS: Post[] = [
         paragraphs: [
           "SMAPI’s CommandManager still exists internally; only the public helper surface changed. Reflecting into the private CommandManager restored command execution without patching SMAPI itself or shipping a forked build.",
           "It is the kind of fix worth writing down because it generalizes: before rewriting a feature, check whether the capability moved rather than disappeared.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "firestore-memory-cache-save-hang",
-    title: "The memory-only Firestore cache that hung my save button",
-    dek: "Graditelj Navika’s infinite spinner was never a UI bug. It was a cache configuration decision.",
-    tags: ["Android", "Firestore", "Debugging"],
-    sections: [
-      {
-        heading: "Symptom first, architecture later",
-        paragraphs: [
-          "Pressing save on a habit hung forever. Every instinct says to look at the button, the coroutine, the view model. The actual culprit sat one layer deeper: Firestore was configured with a memory-only cache.",
-          "With memory-only persistence, read/write resolution behaves differently than the default disk-backed setup, and the save path was waiting on assumptions that no longer held.",
-        ],
-      },
-      {
-        heading: "Fix the setting, not the symptom",
-        paragraphs: [
-          "Correcting the cache configuration fixed the hang at the source; only afterwards did the remaining Compose recomposition issues on the streak screens become visible and worth debugging.",
-          "The takeaway: in MVI with Clean Architecture boundaries, a misconfigured dependency shows up as a UX bug somewhere far away.",
         ],
       },
     ],

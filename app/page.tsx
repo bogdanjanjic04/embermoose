@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import Hero from "@/components/Hero";
 import ProjectPanel from "@/components/ProjectPanel";
+import MotionCard, { ArrowSlide } from "@/components/MotionCard";
 import { AREAS, MOD_NOTES, POSTS, PROJECTS, SITE } from "@/lib/data";
 
 export default function HomePage() {
@@ -58,21 +59,20 @@ export default function HomePage() {
               ).length;
               return (
                 <li key={area.slug}>
-                  <Link
-                    href={`/work/${area.slug}`}
-                    className="group flex h-full flex-col justify-between border border-rule bg-paper p-5 no-underline transition-colors hover:border-accent-deep"
-                  >
-                    <span>
-                      <span className="font-display text-lg font-semibold tracking-tight transition-colors group-hover:text-accent">
-                        {area.name}
+                  <MotionCard href={`/work/${area.slug}`} className="group">
+                    <span className="flex h-full flex-col justify-between border border-rule bg-paper p-5 transition-colors hover:border-accent-deep">
+                      <span>
+                        <span className="font-display text-lg font-semibold tracking-tight transition-colors group-hover:text-accent">
+                          {area.name}
+                        </span>
+                        <span className="mt-1.5 block text-sm text-muted">{area.intro}</span>
                       </span>
-                      <span className="mt-1.5 block text-sm text-muted">{area.intro}</span>
+                      <span className="mono-label mt-4 flex items-center justify-between text-faint">
+                        {count} {count === 1 ? "build" : "builds"}
+                        <ArrowSlide />
+                      </span>
                     </span>
-                    <span className="mono-label mt-4 flex items-center justify-between text-faint">
-                      {count} {count === 1 ? "build" : "builds"}
-                      <ArrowRight size={12} aria-hidden />
-                    </span>
-                  </Link>
+                  </MotionCard>
                 </li>
               );
             })}
@@ -87,7 +87,7 @@ export default function HomePage() {
               <span className="text-accent">03</span> / from the field notes
             </p>
             <h2 id="notes-heading" className="mt-3 font-display text-2xl font-bold tracking-tight">
-              Fresh out of the modding notebook.
+              Fresh from the modding notebook.
             </h2>
             <ul className="mt-6 divide-y divide-rule border-y border-rule">
               {MOD_NOTES.slice(0, 3).map((n) => (
