@@ -7,7 +7,7 @@ export const metadata = {
   title: "Modding & reverse engineering",
   description:
     "Stardew Valley SMAPI mods, reverse engineering and save repair by Bogdan Janjić (ToShamara): RenameAnimal, Chat Commands for SDV 1.6, XNB texture work and a Serbian localization pipeline.",
-  alternates: { canonical: "/modding" },
+  alternates: { canonical: "/modding/" },
 };
 
 export default function ModdingPage() {

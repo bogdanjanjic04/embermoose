@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Gallery",
   description:
     "The schematic wall of Ember Moose: hand-built abstract representations of every project by Bogdan Janjić (ToShamara), honestly labeled as representations rather than screenshots.",
-  alternates: { canonical: "/gallery" },
+  alternates: { canonical: "/gallery/" },
 };
 
 export default function GalleryPage() {

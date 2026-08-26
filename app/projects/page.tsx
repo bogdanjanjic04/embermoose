@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Projects",
   description:
     "The project archive of Bogdan Janjić: ANTE ZERO and Pillars of Control in Godot, CampaignForge for WPF, Android apps like AkademskiPratilac, Graditelj Navika, KinetiDebt and ScreenWatcher, plus headless-samp.",
-  alternates: { canonical: "/projects" },
+  alternates: { canonical: "/projects/" },
 };
 
 export default function ProjectsPage() {

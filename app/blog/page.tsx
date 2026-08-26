@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Devlog write-ups by Bogdan Janjić (ToShamara): SMAPI reflection, Firestore cache debugging, The Cut card design, SA-MP RNG research and Serbian localization with Ollama.",
-  alternates: { canonical: "/blog" },
+  alternates: { canonical: "/blog/" },
 };
 
 export default function BlogPage() {

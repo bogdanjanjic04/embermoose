@@ -5,7 +5,7 @@ export const metadata = {
   title: "Lab",
   description:
     "Experiments and technical investigations by Bogdan Janjić (ToShamara): local LLM tooling with Ollama, SA-MP RNG research with seed recovery tooling, Linux systems tools and media/graphics experiments.",
-  alternates: { canonical: "/lab" },
+  alternates: { canonical: "/lab/" },
 };
 
 export default function LabPage() {

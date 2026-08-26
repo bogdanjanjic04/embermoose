@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with Bogdan Janjić (ToShamara) about software development work, internships or the projects on Ember Moose. GitHub, itch.io and X.",
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: "/contact/" },
 };
 
 const CHANNELS = [

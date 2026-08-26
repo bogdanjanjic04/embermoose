@@ -6,8 +6,7 @@ import MobileCta from "@/components/MobileCta";
 import Analytics from "@/components/Analytics";
 import "./globals.css";
 
-// TODO(bogdan): replace with the production domain before launch
-const SITE_URL = "https://embermoose.github.io";
+const SITE_URL = "https://bogdanjanjic04.github.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -53,7 +52,7 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Ember Moose",
-  alternateName: "Ember Moose — Bogdan Janjić",
+  alternateName: "Ember Moose: Bogdan Janjić",
   url: SITE_URL,
   description:
     "Software, games, tools and experiments by Bogdan Janjić: desktop apps, Android development, Godot games, Stardew Valley mods, Linux systems work and local LLM tooling.",
@@ -64,6 +63,7 @@ const personJsonLd = {
   "@type": "Person",
   name: "Bogdan Janjić",
   alternateName: "ToShamara",
+  url: "https://bogdanjanjic04.github.io/about/",
   description:
     "Final-year Applied IT student and developer working across software, games, Android, Linux, modding and local LLM tooling.",
   homeLocation: { "@type": "Place", name: "Užice, Serbia" },

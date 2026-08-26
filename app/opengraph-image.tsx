@@ -52,7 +52,7 @@ export default function OpengraphImage() {
           }}
         >
           <div>Bogdan Janjić</div>
-          <div>embermoose.github.io</div>
+          <div>bogdanjanjic04.github.io</div>
         </div>
       </div>
     ),

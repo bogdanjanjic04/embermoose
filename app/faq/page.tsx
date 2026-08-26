@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "FAQ",
   description:
     "Questions about Ember Moose and Bogdan Janjić: availability for hire, playable games, Stardew Valley mods and the Arch Linux workflow.",
-  alternates: { canonical: "/faq" },
+  alternates: { canonical: "/faq/" },
 };
 
 export default function FaqPage() {

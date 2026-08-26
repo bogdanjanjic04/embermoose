@@ -20,7 +20,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.dek,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: `/blog/${post.slug}/` },
     openGraph: { title: `${post.title} · Ember Moose`, description: post.dek },
   };
 }
@@ -75,6 +75,15 @@ export default async function PostPage({
             </section>
           ))}
         </div>
+
+        {post.related && (
+          <p className="mt-10 text-sm text-muted">
+            Related:{" "}
+            <Link href={post.related.href} className="text-ink underline-offset-4 hover:text-accent hover:underline">
+              {post.related.label}
+            </Link>
+          </p>
+        )}
 
         <nav
           aria-label="More posts"

@@ -594,6 +594,7 @@ export type Post = {
   dek: string;
   tags: string[];
   sections: PostSection[];
+  related?: { href: string; label: string };
 };
 
 // Devlog-style write-ups grounded strictly in shipped work. Intentionally undated.
@@ -603,6 +604,7 @@ export const POSTS: Post[] = [
     title: "Porting Chat Commands to Stardew Valley 1.6",
     dek: "When the public API loses a capability but the runtime doesn’t, reflection is the honest middle ground.",
     tags: ["SMAPI", "Reflection", "SDV 1.6"],
+    related: { href: "/modding/#chat-commands-16", label: "Field note: Chat Commands port" },
     sections: [
       {
         heading: "What broke",
@@ -625,6 +627,7 @@ export const POSTS: Post[] = [
     title: "Recovering seeds from the SA-MP server RNG",
     dek: "Reverse engineering research, seed recovery tooling and a validation harness: how a disclosure gets supported by evidence.",
     tags: ["Research", "Python", "C"],
+    related: { href: "/lab/#samp-research", label: "Lab: SA-MP RNG recovery tooling" },
     sections: [
       {
         heading: "The question",

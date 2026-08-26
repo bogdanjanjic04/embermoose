@@ -25,7 +25,7 @@ export async function generateMetadata({
   return {
     title: area.name,
     description: `${area.intro} Projects and notes in ${area.name.toLowerCase()} by Bogdan Janjić (ToShamara).`,
-    alternates: { canonical: `/work/${area.slug}` },
+    alternates: { canonical: `/work/${area.slug}/` },
   };
 }
 

@@ -24,7 +24,7 @@ export async function generateMetadata({
   return {
     title: project.name,
     description: `${project.summary} ${project.meta}.`,
-    alternates: { canonical: `/projects/${project.slug}` },
+    alternates: { canonical: `/projects/${project.slug}/` },
     openGraph: {
       title: `${project.name} · Ember Moose`,
       description: project.summary,

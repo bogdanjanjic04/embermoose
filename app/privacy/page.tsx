@@ -6,7 +6,7 @@ import { SITE } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Privacy policy",
   description: "What Ember Moose collects (almost nothing) and what it doesn't.",
-  alternates: { canonical: "/privacy" },
+  alternates: { canonical: "/privacy/" },
 };
 
 export default function PrivacyPage() {

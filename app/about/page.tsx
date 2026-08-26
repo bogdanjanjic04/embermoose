@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Bogdan Janjić is a final-year Applied IT student in Užice, Serbia, working across software development, games, Android, Linux, modding and local LLM tooling. Graduating late 2026.",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "/about/" },
 };
 
 const META: { label: string; value: string }[] = [

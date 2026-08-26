@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Areas of work",
   description:
     "Six lanes of work by Bogdan Janjić (ToShamara): application development, Android, game development, systems & Linux, AI & local tooling, modding & reverse engineering.",
-  alternates: { canonical: "/work" },
+  alternates: { canonical: "/work/" },
 };
 
 export default function WorkIndexPage() {

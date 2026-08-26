@@ -6,7 +6,7 @@ import { SITE } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Terms of use",
   description: "The plain-language terms for using Ember Moose.",
-  alternates: { canonical: "/terms" },
+  alternates: { canonical: "/terms/" },
 };
 
 export default function TermsPage() {
